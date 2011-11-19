@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Hello Hangman - Project for CSC 8540</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="resources/javascript/jquery.1.6.2.js" type="text/javascript"></script>
+		
+		<link href="resources/css/base.css" media="all" rel="stylesheet" />
+        <link href="resources/css/alerts.css" media="all" rel="stylesheet" />
+		
+		<script src="resources/javascript/hangman.main.js"></script>
+		<script src="resources/javascript/hangman.guess.js"></script>
+		<script src="resources/javascript/hangman.word.js"></script>
+        <script src="resources/javascript/hangman.alerts.js"></script>
+		
+		<script type = "text/javascript">
+			$(document).ready(function() {
+			    $('#hideh1').click(function() {
+					$('h1').hide();
+			    });
+			});
+		
+		</script>
+	</head>
+
+	<body>
+        <div class="title">
+            <h1 class="title">HELLO HANGMAN!</h1>
+            <a class="button" id="newWord">New Game</a>
+        </div>
+
+		<nav>
+			<div class="menu">
+                <ul>
+                    <li class="score player1">Player 1: <span id="p1Score">0</span></li>
+                    <li class="score player2">Player 2: <span id="p2Score">0</span></li>
+                    <li class="score player3">Player 3: <span id="p3Score">0</span></li>
+                    <li class="score player4">Player 4: <span id="p4Score">0</span></li>
+                </ul>
+			</div>
+		</nav>
+		
+		<div class="game">
+			<p id="testingP" style="border:1px solid #000; display: none;"></p>
+			
+			<div id="boxes"></div>
+			
+			<form class="panel" id="guessWordId" action="">
+                <fieldset>
+                    <legend id="guessWordLegend">Guess the word now to win! If wrong, you lose.</legend>
+                    <input name="guessWordField" class='word' />
+                    <button class="button" id ="guessWordBtn">Guess!</button>
+                </fieldset>
+			</form>
+			
+			<form class="panel" id="playerChooseId" action="">
+				<fieldset>
+					<legend>Choose what player to pass control to</legend>
+					<button class="button" id="player1ChooseBtn">Player 1</button>
+					<button class="button" id="player2ChooseBtn">Player 2</button>
+					<button class="button" id="player3ChooseBtn">Player 3</button>
+					<button class="button" id="player4ChooseBtn">Player 4</button>
+				</fieldset>
+			</form>
+			
+			<form class="panel" id="inputWord" action="">
+                <fieldset>
+                    <legend id="inputWordLegend">Player 1, Please Enter a Word or Phrase</legend>
+                    <input type="password" name="word" class='word' />
+                    <button class="button" id ="inputButton">Enter Word</button>
+                </fieldset>
+			</form>
+	
+            <form class="panel" id="inputLetter" action="">
+                <fieldset>
+                    <legend id="inputLetterLegend">Player 2, Please Guess a Letter</legend>
+                    <input type="text" name="letter" class="letter" maxlength=1 />
+                    <button class="button" id="inputLetterButton">Enter Letter</button>
+                </fieldset>
+            </form>
+
+            <ul class="panel strikes">
+                <li class="strike" id="1">X</li>
+                <li class="strike" id="2">X</li>
+                <li class="strike" id="3">X</li>
+                <li class="strike" id="4">X</li>
+                <li class="strike" id="5">X</li>
+                <li class="strike" id="6">X</li>               
+                <li class="strike last" id="7">X</li>
+            </ul>
+
+            <div class="panel bottom">
+                <div class="gallows inline">
+                    <p id="gallowsPane"><img src="resources/images/0.png"></p>
+                </div>
+
+                <div class="wordBankDiv inline" id="wordBankDiv">
+                    <h3>Letters Guessed</h3>
+                    <p id="wordBankP"></p>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,254 @@
+/*
+   base.css
+   hellohangman-svn
+   
+   Created by Andrew Larkin on 2011-09-21.
+   Copyright 2011 Andrew Larkin. All rights reserved.
+*/
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+div.infoStr {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	font-weight: italic;
+}
+
+div.menu{
+	display: block;
+	width: 800px;
+	height: 60px;
+	position: relative;
+	margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+div.game {
+	display: block;
+	width: 800px;
+	height: 600px;
+	background: #005a9f
+	background: -webkit-gradient(linear, top, bottom, from(#005a9f), to(#6fa5ce));
+	background: -webkit-linear-gradient(top, #005a9f, #6fa5ce);
+	background: -moz-linear-gradient(top, #005a9f, #6fa5ce);
+	background: -ms-linear-gradient(top, #005a9f, #6fa5ce);
+	background: -o-linear-gradient(top, #005a9f, #6fa5ce);
+	box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+	border: 1px solid #000;
+	border-radius: 4px;
+	padding: 20px;
+	position: relative;
+	margin: 0 auto;
+}
+
+h1.title {
+	font-size: 22px;
+	text-align: center;
+}
+
+div.title {
+	text-align: center;
+}
+
+.inline{
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+
+.inactive{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.button{
+	color: #ffffff;
+	background: #373737;
+	background: -webkit-gradient(linear, top, bottom, from(#7c7c7c), to(#373737));
+	background: -webkit-linear-gradient(top, #7c7c7c, #373737);
+	background: -moz-linear-gradient(top, #7c7c7c, #373737);
+	background: -ms-linear-gradient(top, #7c7c7c, #373737);
+	background: -o-linear-gradient(top, #7c7c7c, #373737);
+	padding: 4px;
+	font-size: 12px;
+	border-radius: 10px;
+	border: 1px solid #2d2d2d;
+	cursor: pointer;
+}
+
+.button:hover{
+	background: #373737;
+	background: -webkit-gradient(linear, top, bottom, from(#b6b6b6), to(#4d4d4d));
+	background: -webkit-linear-gradient(top, #b6b6b6, #4d4d4d);
+	background: -moz-linear-gradient(top, #b6b6b6, #4d4d4d);
+	background: -ms-linear-gradient(top, #b6b6b6, #4d4d4d);
+	background: -o-linear-gradient(top, #b6b6b6, #4d4d4d);
+}
+
+.panel {
+    display: block;
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+form#playerChooseId {
+	width: 400px;
+	display: block;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+form#guessWordId {
+	width: 400px;
+	display: block;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+form#inputWord {
+	width: 400px;
+	display: block;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+form.panel fieldset{
+    border:  none;
+    padding-top: 10px;
+}
+
+form.panel fieldset legend{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form.panel fieldset,
+div#letterDiv h3,
+div#wordBankDiv h3{
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	font-size: 14px;
+}
+
+div#boxes {
+	text-align: center;
+    height: 55px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+form#inputWord input.word{
+	display: block;
+	width: 300px;
+	margin: 0 auto 4px;
+}
+
+form#inputWord button.button{
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+}
+
+form#inputLetter {
+	width: 400px;
+	margin: 0px auto 20px;
+	text-align: center;
+}
+
+form#inputLetter input.letter{
+	display: block;
+	width: 25px;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+
+div.wordBankDiv {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+ul.strikes {
+	list-style: none;
+	margin: 0px;
+	padding: 10px;
+	width: 239px;
+    height: 20px;
+	display: block;
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px 4px 0px 0px;
+	margin: 0 auto;
+}
+
+ul.strikes li.strike{
+	display: inline-block;
+	display: -moz-inline-stack;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+	margin-right: 4px;
+    padding-top: 2px;
+	width: 20px;
+    height: 18px;
+	border: 1px solid #828282;
+	color: #828282;
+	text-align: center;
+	font-weight: bold;
+}
+
+ul.strikes li.strike.active{
+	color: #ea0313;
+}
+
+ul.strikes li.strike.last{
+	margin-right: 0px;
+}
+
+div.word-box{
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+b.letter-box{
+	text-align: center;
+	width: 25px;
+	height: 20px;
+	padding-top: 3px;
+	margin: 2px;
+	background: #ffffff;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.5) inset;
+}
+
+b.letter-box.guessed{
+	background: #f0c9a4;
+}
+
+div.gallows {
+    width: 320px;
+    height: 240px;
+    border: 1px solid #000000;
+}
+
+div.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li.score {
+    display: inline-block;
+    margin-right: 20px;
+    color: gray;
+}
+
+li.score.active {
+    color: black;
+}
+
