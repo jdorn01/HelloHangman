@@ -1,3 +1,12 @@
+/*
+   hangman.word.js
+   
+   Created by Andrew Larkin on 2011-09-21.
+   Modified by Joe Dorn & Tom Carpenter on 2011-11-14
+   Copyright 2011 Andrew Larkin, Joe Dorn, Tom Carpenter. 
+   All rights reserved.
+*/
+
 (function(win, doc, nil, $){
 	Hangman = Hangman || {};
 	var Word = Hangman.Word = {},

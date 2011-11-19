@@ -1,3 +1,4 @@
+/* Copyright 2011 Andrew Larkin, Joe Dorn, Tom Carpenter */
 
 var app = require('express').createServer(),
 

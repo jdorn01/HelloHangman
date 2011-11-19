@@ -1,3 +1,12 @@
+/*
+   hangman.main.js
+   
+   Created by Andrew Larkin on 2011-09-21.
+   Modified by Joe Dorn & Tom Carpenter on 2011-11-14
+   Copyright 2011 Andrew Larkin, Joe Dorn, Tom Carpenter. 
+   All rights reserved.
+*/
+
 var Hangman = (function(win, doc, $){
     var $inputWord, $inputLetter, $wordBankDiv, $strikes, $finalWord, $guessWord
         settings = {
